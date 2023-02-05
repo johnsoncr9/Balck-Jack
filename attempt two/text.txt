@@ -1,0 +1,45 @@
+Black Jack (21)
+***RULES:
+- Dealer (CPU) vs player (user)
+- Object is to get as close to 21, w/out going over
+- Dealer (CPU) and player (user) start w/ 2 cards. Both player cards are over turned
+  - Only one of computer's cards are overturned
+- Player either hits or stays
+- Computer will hit until they win or go over 21
+- Deck is refreshed after x number of rounds
+
+**How to implement:
+- Dealer array
+- Player array
+
+- Will create a CARD CLASS and put all 52 cards into an object (Deck): ID: suit, Value: Value
+
+**WIN CHECK
+- Player Wins if
+  - Dealer Bust
+  - Player hand > Dealer hand
+
+- Dealer Wins if
+  - Player Busts
+  - Dealer Hand > Player Hand
+
+- Tie 
+  - Dealer Hand === Player Hand at end of game (Dealer will not play for tie)   
+  - Dealer Hand === 21
+
+  ** CURRENT BUGS **
+  - Issues w/ RESET and STAY buttons. 
+    - Specifically when player hits stay after the game
+    has been refreshed (Non-specific if the borrower hits HIT before STAY)
+  - The create div is not working for the dealer card right after the delete overturnedcard func is rounds
+  - The dealer total is still updated. 
+    - Also the innerHTML is not updated, eventhough the winFunction has been run (will refresh)
+    **Fixed**
+    - Had to place stayButton actions in a function - stay button was running multiple times
+
+
+**Additional Features TO ADD**
+- Add a betting Features
+- Enter the players name
+- Deactivate buttons when they are not neccessary
+- Improve the UI
